@@ -1,7 +1,12 @@
 <div class="schedule-container">
   <div class="schedule-main">
     <!-- Main Schedule Section -->
-    <h2>Weekly Schedule</h2>
+    <h2>Weekly Schedule
+        <small>
+          <%= link_to 'pdf', schedule_path(format: :pdf) %>
+        </small>
+    </h2>
+
     <div class="schedule-calendar">
       <div class="calendar-row">
         <% ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].each_with_index do |day, index| %>

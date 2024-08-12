@@ -55,9 +55,9 @@ ActiveRecord::Schema.define(version: 2024_08_11_212716) do
   end
 
   create_table "teacher_subjects", force: :cascade do |t|
-    t.bigint "teacher_id", null: false
-    t.bigint "subject_id", null: false
-    t.integer "level", null: false
+    t.integer "teacher_id", null: false
+    t.integer "subject_id", null: false
+    t.integer "level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["subject_id"], name: "index_teacher_subjects_on_subject_id"
