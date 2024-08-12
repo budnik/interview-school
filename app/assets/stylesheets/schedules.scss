@@ -116,8 +116,27 @@
   background-color: #0056b3;
 }
 
+.calendar-section-header {
+  // strong {
+  //   float: left;
+  // }
+  // form {
+  //   float: right;
+    display: flex;
+    justify-content: space-between; /* Distributes days evenly across the row */
+
+    input[type="submit"]{
+    border-width: 0;
+    padding: 2.5px;
+    background: none;
+    &:hover {
+      color: red;
+      background: rgba(red,0.1);
+    }
+  }
+}
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .schedule-container {
     flex-direction: column; /* Stack sections vertically on small screens */
   }

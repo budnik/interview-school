@@ -35,3 +35,9 @@
   margin-right: auto; /* Push this item to the center by taking up all the space to the right */
   text-align: center;
 }
+
+@media print {
+  .no-print, .no-print * {
+      display: none !important;
+  }
+}
