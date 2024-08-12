@@ -15,6 +15,7 @@ TeacherSubject.all.each do |teacher_subject|
     ]
   end
 
+  slots << Time.new(1970, 1, 1, 7, 30)
   slots << Time.new(1970, 1, 1, 21, 0) if duration == 50
 
   day_of_week = Section.day_of_weeks.keys.sample
