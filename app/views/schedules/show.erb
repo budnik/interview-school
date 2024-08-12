@@ -9,7 +9,11 @@
             <h3><%= day %></h3>
             <% @student_sections_by_day[index]&.each do |section| %>
               <div class="calendar-section">
-                <strong><%= section.subject %></strong><br>
+                <div class="calendar-section-header">
+                  <strong><%= section.subject %></strong>
+                  <%= button_to '✖', destroy_section_path(section), method: :delete %>
+                </div>
+                <br>
                 <span><%= section.starts_at.strftime('%I:%M %p') %> - <%= section.ends_at.strftime('%I:%M %p') %></span><br>
                 <span>Teacher: <%= section.teacher_name %></span><br>
                 <span>Classroom: <%= section.classroom_name %></span>
@@ -22,7 +26,7 @@
   </div>
 
   <!-- Available Sections Pane -->
-  <div class="schedule-pane">
+  <div class="schedule-pane no-print">
     <h2>Available Sections</h2>
     <ul class="available-sections-list">
       <% @available_sections.each do |section| %>

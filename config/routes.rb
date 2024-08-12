@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   resource :schedule, only: :show
   post 'section/:id', to: 'sections#create', as: :join_section
+  delete 'section/:id', to: 'sections#destroy', as: :destroy_section
   resources :subjects
   root to: 'subjects#index'
 end

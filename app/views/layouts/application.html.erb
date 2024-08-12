@@ -10,14 +10,16 @@
   </head>
 
   <body>
-    <%= render 'sessions/user_switcher' %>
+    <span class="no-print">
+      <%= render 'sessions/user_switcher' %>
 
-    <%= link_to 'Classes', subjects_path %>
-    <%= link_to 'Teachers', teachers_path %>
-    <% if @current_user %>
-      <%= link_to 'Schedule', schedule_path %>
-    <% end %>
-    <br>
+      <%= link_to 'Classes', subjects_path %>
+      <%= link_to 'Teachers', teachers_path %>
+      <% if @current_user %>
+        <%= link_to 'Schedule', schedule_path %>
+      <% end %>
+      <br>
+    </span>
     <%= yield %>
   </body>
 </html>
