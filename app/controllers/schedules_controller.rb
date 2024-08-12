@@ -65,6 +65,6 @@ class SchedulesController < ApplicationController
   end
 
   def encryptor
-    ActiveSupport::MessageEncryptor.new(Rails.application.secrets.secret_key_base[0..31])
+    ActiveSupport::MessageEncryptor.new(Rails.application.secret_key_base[0..31])
   end
 end
