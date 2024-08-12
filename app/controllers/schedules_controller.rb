@@ -40,7 +40,7 @@ class SchedulesController < ApplicationController
     request = Net::HTTP::Post.new(url)
     request["Authorization"] = "Bearer " + DOPPIO_TOKEN
     request["Content-Type"] = "application/json"
-    request.body = pp JSON.dump({
+    request.body = JSON.dump({
       "page": {
         "pdf": {
           "printBackground": true
