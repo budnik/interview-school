@@ -3,7 +3,7 @@ class SchedulesController < ApplicationController
   DOPPIO_TOKEN = ENV.fetch('DOPPIO_TOKEN')
   def show
     respond_to do |format|
-      format.pdf { send_data(generated_pdf, filename: 'schedule.pdf', type: 'application/pdf')}
+      format.pdf { redirect_to(generated_pdf_url)}
       format.html do
         sections = current_user.sections.group_by(&:day_of_week)
 
@@ -32,7 +32,7 @@ class SchedulesController < ApplicationController
     Section.where.not(id: conflicting_sections)
   end
 
-  def generated_pdf
+  def generated_pdf_url
     url = URI("https://api.doppio.sh/v1/render/pdf/sync")
     https = Net::HTTP.new(url.host, url.port)
     https.use_ssl = true
@@ -51,7 +51,7 @@ class SchedulesController < ApplicationController
       }
     })
     response = https.request(request)
-    puts response.read_body
+    JSON.parse(response.read_body)["documentUrl"]
   end
 
   def enforce_session_or_token
