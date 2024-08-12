@@ -23,11 +23,10 @@ class SchedulesController < ApplicationController
       .sections
       .pluck(:day_of_week, :starts_at, :ends_at)
       .group_by(&:shift)
-      .transform_values(&:flatten)
 
-    conflicting_sections = Section.running_at(busy_at['everyday'])
-                                  .or(Section.tt.running_at(busy_at['tt']))
-                                  .or(Section.mwf.running_at(busy_at['mwf']))
+    conflicting_sections = Section.everyday.running_at(busy_at.values.flatten)
+                                  .or(Section.tt.running_at(busy_at.values_at('everyday', 'tt').flatten.compact))
+                                  .or(Section.mwf.running_at(busy_at.values_at('everyday', 'mwf').flatten.compact))
 
     Section.where.not(id: conflicting_sections)
   end
