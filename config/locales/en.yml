@@ -31,7 +31,10 @@
 
 en:
   hello: "Hello world"
-en:
+  day_of_week:
+    everyday: 🅜🅣🅦🅣🅕
+    tt: Ⓜ🅣Ⓦ🅣Ⓕ
+    mwf: 🅜Ⓣ🅦Ⓣ🅕
   activerecord:
     models:
       subject:

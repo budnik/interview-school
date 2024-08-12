@@ -11,3 +11,23 @@ math_and_english_teacher_english:
   teacher: math_and_english_teacher
   subject: english
   level: 9
+
+social_studies_subject:
+  teacher: social_studies_teacher
+  subject: social_studies
+  level: 9
+
+foreign_language_subject:
+  teacher: foreign_language_teacher
+  subject: foreign_language
+  level: 2
+
+physical_education_subject:
+  teacher: physical_education_teacher
+  subject: physical_education
+  level: 5
+
+advanced_physical_education:
+  teacher: physical_education_teacher
+  subject: advanced_physical_education
+  level: 7

@@ -1,0 +1,8 @@
+<div class="user-switcher-banner">
+  <div class="container">
+    <h3>Developer mode</h3>
+    <%= form_with(url: current_user_path) do %>
+      <%= collection_select(:current_user, :id, Student.all, :id, :first_and_last_name, { prompt: "Select current user"}, {onchange: "this.form.submit()" }) %>
+    <% end %>
+  </div>
+</div>

@@ -13,3 +13,15 @@ math_and_english_teacher:
 teacher_without_subjects:
   first_name: Teacher without Subject
   last_name: Still learning
+
+social_studies_teacher:
+  first_name: "John"
+  last_name: "Doe"
+
+foreign_language_teacher:
+  first_name: "Maria"
+  last_name: "Gomez"
+
+physical_education_teacher:
+  first_name: "Anna"
+  last_name: "Smith"

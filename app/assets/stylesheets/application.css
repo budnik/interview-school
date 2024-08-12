@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.user-switcher-banner {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.user-switcher-banner .container {
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between; /* Space elements at opposite ends */
+  align-items: center;
+}
+
+.user-switcher-banner h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-right: auto; /* Push this item to the center by taking up all the space to the right */
+  text-align: center;
+}

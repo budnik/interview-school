@@ -10,8 +10,13 @@
   </head>
 
   <body>
+    <%= render 'sessions/user_switcher' %>
+
     <%= link_to 'Classes', subjects_path %>
     <%= link_to 'Teachers', teachers_path %>
+    <% if @current_user %>
+      <%= link_to 'Schedule', schedule_path %>
+    <% end %>
     <br>
     <%= yield %>
   </body>

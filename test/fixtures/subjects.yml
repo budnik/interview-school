@@ -8,3 +8,19 @@ english:
 
 subject_without_teacher:
   name: Subject without teacher
+
+social_studies:
+  name: "Social Studies"
+  description: "Study of society and history."
+
+foreign_language:
+  name: "Foreign Language"
+  description: "Learning a new language."
+
+physical_education:
+  name: "Physical Education"
+  description: "Fitness and sports activities."
+
+advanced_physical_education:
+  name: "Advanced Physical Education"
+  description: "Extra fitness and sports activities."

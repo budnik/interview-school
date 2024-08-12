@@ -1,0 +1,129 @@
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* Container for the schedule and available sections */
+/* app/assets/stylesheets/application.css */
+
+/* Container for the schedule */
+.schedule-container {
+  display: flex;
+  justify-content: center; /* Centers the calendar horizontally */
+  margin: 20px;
+}
+
+/* Main schedule section styling */
+.schedule-main {
+  flex: 1;
+}
+
+/* Calendar layout styling */
+.schedule-calendar {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-row {
+  display: flex;
+  justify-content: space-between; /* Distributes days evenly across the row */
+  border: 1px solid #ddd;
+}
+
+.calendar-day {
+  flex: 1; /* Each day takes up equal space */
+  border-left: 1px solid #ddd;
+  padding: 10px;
+  min-height: 400px; /* Ensures a minimum height for the days */
+  box-sizing: border-box;
+}
+
+.calendar-day:first-child {
+  border-left: none;
+}
+
+.calendar-day h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.calendar-section {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.calendar-section strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.calendar-section span {
+  display: block;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calendar-row {
+    flex-direction: column; /* Stack days vertically on small screens */
+  }
+
+  .calendar-day {
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .calendar-day:first-child {
+    border-top: none;
+  }
+}
+/* Available sections pane styling */
+.schedule-pane {
+  flex: 1; /* Takes up one-third of the space */
+  max-width: 250px; /* Set a max width for the pane */
+}
+
+.available-sections-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.available-section-item {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.join-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  &:visited {
+    color: white;
+  }
+}
+
+.join-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .schedule-container {
+    flex-direction: column; /* Stack sections vertically on small screens */
+  }
+
+  .schedule-main, .schedule-pane {
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
