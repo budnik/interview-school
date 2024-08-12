@@ -17,6 +17,14 @@ foreign_language:
   name: "Foreign Language"
   description: "Learning a new language."
 
+foreign_language_2:
+  name: "Foreign Language 2"
+  description: "Learning a new language advanced."
+
+foreign_language_3:
+  name: "Foreign Language 3"
+  description: "Learning a new language advanced."
+
 physical_education:
   name: "Physical Education"
   description: "Fitness and sports activities."

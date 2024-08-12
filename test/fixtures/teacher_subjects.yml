@@ -22,6 +22,16 @@ foreign_language_subject:
   subject: foreign_language
   level: 2
 
+foreign_language_subject_2:
+  teacher: foreign_language_teacher
+  subject: foreign_language_2
+  level: 5
+
+foreign_language_subject_3:
+  teacher: foreign_language_teacher
+  subject: foreign_language_3
+  level: 6
+
 physical_education_subject:
   teacher: physical_education_teacher
   subject: physical_education
