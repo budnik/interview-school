@@ -61,7 +61,7 @@ class SchedulesController < ApplicationController
   def user_from_token
     return unless params[:token]
 
-    @current_user ||= Student.find(encryptor.decrypt_and_verifyparams[:token])
+    @current_user ||= Student.find(encryptor.decrypt_and_verify(params[:token]))
   end
 
   def encryptor
