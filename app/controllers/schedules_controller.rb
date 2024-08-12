@@ -3,7 +3,7 @@ class SchedulesController < ApplicationController
   DOPPIO_TOKEN = ENV.fetch('DOPPIO_TOKEN')
   def show
     respond_to do |format|
-      format.pdf { redirect_to(generated_pdf_url)}
+      format.pdf { redirect_to generated_pdf_url }
       format.html do
         sections = current_user.sections.group_by(&:day_of_week)
 

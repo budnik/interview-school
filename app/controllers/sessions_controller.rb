@@ -5,3 +5,4 @@ class SessionsController < ApplicationController
     redirect_back(fallback_location:"/")
   end
 end
+
